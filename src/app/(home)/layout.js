@@ -1,21 +1,27 @@
 import { Roboto } from "next/font/google";
 import "../globals.css";
+import Navbar from "./navbar";
 
-const roboto = Roboto({ subsets: ["latin"], weight: "300" });
+import Link from "next/link";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
+});
 
 export const metadata = {
-  title: "HomeAuto",
+  title: "text",
   description: "Home Auto",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <h1 className="bg-red-300 text-black top-0 left-0 right-0 flex justify-center align-center h-5 fixed">
-          home
-        </h1>
-        {children}
+      <body className={`${roboto.className} font-sans`}>
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   );

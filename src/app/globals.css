@@ -1,20 +1,7 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 *,
 *::before,
 *::after {
@@ -24,18 +11,42 @@
   border: none;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+:root {
+  --foreground-rgb: 252, 245, 237;
+  --secondary-rgb: 244, 191, 151;
+  --last-rgb: 206, 90, 103;
+  --background-start-rgb: 31, 23, 23;
+  --homebackground-rgb: 252, 245, 237;
+  --text-primary-rgb: 31, 23, 23;
+  --text-secondary-rgb: 206, 90, 103;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
+} */
+
+body {
+  background: rgb(var(--homebackground-rgb));
+}
+
+.primarytext {
+  color: rgb(var(--text-primary-rgb));
+}
+
+.secondarytext {
+  color: rgb(var(--text-secondary-rgb));
+}
+
+.secondarycolor {
+  background-color: rgb(var(--secondary-rgb));
+}
+.lastcolor {
+  background-color: rgb(var(--last-rgb));
+}
+button {
+  cursor: pointer;
 }
