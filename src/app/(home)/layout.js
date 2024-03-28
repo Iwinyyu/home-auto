@@ -18,8 +18,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${roboto.className} font-sans`}>
+    <html lang="en" className="w-screen overflow-x-hidden">
+      <body
+        className={`${roboto.className} font-sans w-screen overflow-x-hidden`}
+      >
         <Navbar />
         <main>{children}</main>
       </body>

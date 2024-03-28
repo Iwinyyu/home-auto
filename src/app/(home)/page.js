@@ -1,23 +1,25 @@
-import { Roboto } from "next/font/google";
-
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
-});
-
+import Waves from "./Waves";
+import Bulb from "./lightbulb";
+import Title from "./title";
 
 export default function Home() {
   return (
-    <main className="flex items-center bg-slate-400 justify-center py-10 px-24">
-      <div className=" bg-white w-2/6">
-      <h1 className={`${roboto.className} font-sans capitalize secondarytext text-6xl font-extrabold`}>home</h1>
-      <h1 className="capitalize ">automation</h1>
-
+    <main className="flex flex-col items-center py-10 px-11 md:px-24">
+      <Title />
+      <div className="mt-8 h-[600px] w-[650px] relative">
+        <Waves />
+        <Bulb />
       </div>
-
     </main>
   );
 }
+
+
+
+{/* <Image
+  src={bulb}
+  alt="navbar"
+  width={95}
+  height={95}
+  className=" absolute inset-0 m-auto"
+></Image> */}
