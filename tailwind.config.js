@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -45,8 +46,11 @@ module.exports = {
       },
     },
     gridAutoColumns: {
-      '30': '40%',
-    }
+      30: "70%",
+    },
+    gridAutoRows: {
+      30: "50%",
+    },
   },
   plugins: [],
 };
